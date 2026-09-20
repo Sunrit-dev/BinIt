@@ -1,0 +1,38 @@
+services:
+  db:
+    image: postgis/postgis:15-3.4
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: binit_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - binit_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d binit_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build:
+      context: ../apps/api
+      dockerfile: Dockerfile
+    environment:
+      DATABASE_URL: postgresql+asyncpg://postgres:postgres@db:5432/binit_db
+      SECRET_KEY: binit-dev-secret-change-me
+      STORAGE_LOCAL_DIR: /data/uploads
+      SEED_ON_START: "true"
+      BACKEND_CORS_ORIGINS: '["http://localhost:3000"]'
+    ports:
+      - "8000:8000"
+    volumes:
+      - binit_uploads:/data/uploads
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  binit_pg:
+  binit_uploads:

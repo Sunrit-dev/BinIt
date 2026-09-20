@@ -1,0 +1,73 @@
+from enum import Enum
+
+
+class UserRole(str, Enum):
+    CITIZEN = "CITIZEN"
+    WORKER = "WORKER"
+    OPERATOR = "OPERATOR"
+    ADMIN = "ADMIN"
+
+
+class WasteCategory(str, Enum):
+    PLASTIC = "PLASTIC"
+    PAPER = "PAPER"
+    METAL = "METAL"
+    GLASS = "GLASS"
+    ORGANIC = "ORGANIC"
+    E_WASTE = "E_WASTE"
+    TEXTILE = "TEXTILE"
+    MIXED = "MIXED"
+    HAZARDOUS = "HAZARDOUS"
+    OTHER = "OTHER"
+    UNKNOWN = "UNKNOWN"
+
+
+class ClassificationStatus(str, Enum):
+    PENDING = "PENDING"
+    CLASSIFIED = "CLASSIFIED"
+    NEEDS_REVIEW = "NEEDS_REVIEW"
+    MANUAL_OVERRIDE = "MANUAL_OVERRIDE"
+    FAILED = "FAILED"
+
+
+class SeverityLevel(str, Enum):
+    LOW = "LOW"
+    MEDIUM = "MEDIUM"
+    HIGH = "HIGH"
+    CRITICAL = "CRITICAL"
+
+
+class ReportStatus(str, Enum):
+    SUBMITTED = "SUBMITTED"
+    AI_PROCESSING = "AI_PROCESSING"
+    CLASSIFIED = "CLASSIFIED"
+    PENDING_REVIEW = "PENDING_REVIEW"
+    ACKNOWLEDGED = "ACKNOWLEDGED"
+    ASSIGNED = "ASSIGNED"
+    IN_PROGRESS = "IN_PROGRESS"
+    RESOLVED = "RESOLVED"
+    VERIFIED = "VERIFIED"
+    CLOSED = "CLOSED"
+    REJECTED = "REJECTED"
+    DUPLICATE = "DUPLICATE"
+    CANCELLED = "CANCELLED"
+    AI_FAILED = "AI_FAILED"
+
+
+class TaskStatus(str, Enum):
+    CREATED = "CREATED"
+    DISPATCHED = "DISPATCHED"
+    IN_PROGRESS = "IN_PROGRESS"
+    COMPLETED = "COMPLETED"
+    CANCELLED = "CANCELLED"
+
+
+class ZoneCode(str, Enum):
+    KOLKATA_URBAN = "KOLKATA_URBAN"
+    GRAM_PANCHAYAT = "GRAM_PANCHAYAT"
+
+
+class QuantityEstimate(str, Enum):
+    SMALL = "SMALL"
+    MEDIUM = "MEDIUM"
+    LARGE = "LARGE"
