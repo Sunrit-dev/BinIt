@@ -21,6 +21,17 @@
 
 ---
 
+## 🚢 Deployments
+
+| Service | Stack | Live URL |
+|---|---|---|
+| **Frontend Web** (Vercel) | Next.js 14, MapLibre GL, Tailwind CSS | [binit-sigma.vercel.app](https://binit-sigma.vercel.app/) |
+| **Backend API** (FastAPI Cloud) | FastAPI, Async SQLAlchemy | _Set up via [docs/DEPLOY.md](./docs/DEPLOY.md) once deployed_ |
+
+> See [docs/DEPLOY.md](./docs/DEPLOY.md) for full deployment instructions (backend + frontend).
+
+---
+
 ## 🌟 Overview
 
 **Binit** bridges the gap between everyday citizens and municipal sanitation crews. When a citizen spots an illegal dump or overflowing bin, they snap a photo. In under two minutes, Binit:
