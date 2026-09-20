@@ -7,6 +7,10 @@
 > *Transforming citizen photo reports into automated municipal dispatch & verified clean-up loops.*
 
 <p align="center">
+  <a href="https://binit-sigma.vercel.app/"><img src="https://img.shields.io/badge/Live_Demo-binit--sigma.vercel.app-22c55e?style=for-the-badge&logo=vercel" alt="Live Demo" /></a>
+</p>
+
+<p align="center">
   <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-14.2-black?style=for-the-badge&logo=next.js" alt="Next.js" /></a>
   <a href="https://fastapi.tiangolo.com/"><img src="https://img.shields.io/badge/FastAPI-0.115+-009688?style=for-the-badge&logo=fastapi" alt="FastAPI" /></a>
   <a href="https://python.org/"><img src="https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python" alt="Python" /></a>
